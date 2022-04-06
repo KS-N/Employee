@@ -1,4 +1,4 @@
-<form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="employeeForm">
     <div class="form-group">
 
         <div class="firstName">
@@ -27,7 +27,32 @@
             </div>
         </div>
 
+        <div class="email">
+            <div class="input-group flex-nowrap">
+                <input type="text" class="form-control" placeholder="email" id="email" formControlName="email">
+            </div>
+            <div class="val-message">
+                <span class="text-danger"
+                    *ngIf="employeeForm.get('email')?.invalid && (employeeForm.get('email')?.dirty || employeeForm.get('email')?.touched)">
+                    Please provide an email.
+                </span>
+            </div>
+        </div>
+
+        <div class="salary">
+            <div class="input-group flex-nowrap">
+                <input type="text" class="form-control" placeholder="salary" id="salary" formControlName="salary">
+            </div>
+            <div class="val-message">
+                <span class="text-danger"
+                    *ngIf="employeeForm.get('salary')?.invalid && (employeeForm.get('salary')?.dirty || employeeForm.get('salary')?.touched)">
+                    Please provide a salary.
+                </span>
+            </div>
+        </div>
+
 
     </div>
-    <button [disabled]="!employeeForm.valid" type="submit" class="form-btn btn btn-primary">Submit</button>
+    <button (click)="postEmployeeDetails()" [disabled]="!employeeForm.valid" type="submit"
+        class="form-btn btn btn-primary">Add Employee</button>
 </form>

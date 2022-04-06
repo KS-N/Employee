@@ -5,7 +5,7 @@ const routes: Routes = [
   {
     path: 'employee-app',
     loadChildren: () =>
-      import('./employeeAppV1/employee-v1.module').then((m) => {
+      import('./employeeAppV1/module/employee-v1.module').then((m) => {
         m.EmployeeV1Module;
       }),
   },
