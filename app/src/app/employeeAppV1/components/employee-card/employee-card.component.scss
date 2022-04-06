@@ -1,0 +1,31 @@
+* {
+  .btn {
+    margin-top: 2rem;
+    margin-right: 0.5rem;
+    border: solid #333333 0.7px;
+    color: white;
+    background-color: #333333;
+    &:hover {
+      background-color: transparent;
+      color: #333333;
+    }
+  }
+}
+
+.card-container {
+  background: linear-gradient(to top, white 30%, #f3f2e9 30%);
+}
+
+.employeeCard {
+  display: flex;
+}
+
+p {
+  margin-top: 0.5rem !important;
+  margin-bottom: 0 !important;
+}
+
+.card {
+  background-color: transparent;
+  height: 16rem;
+}

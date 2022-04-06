@@ -1,58 +1,74 @@
 <form [formGroup]="employeeForm">
     <div class="form-group">
-
-        <div class="firstName">
-            <div class="input-group flex-nowrap">
-                <input type="text" class="form-control" placeholder="First Name" id="firstName"
-                    formControlName="firstName">
-            </div>
-            <div class="val-message">
-                <span class="text-danger"
-                    *ngIf="employeeForm.get('firstName')?.invalid && (employeeForm.get('firstName')?.dirty || employeeForm.get('firstName')?.touched)">
-                    Please provide a first name.
-                </span>
-            </div>
-        </div>
-
-        <div class="lastName">
-            <div class="input-group flex-nowrap">
-                <input type="text" class="form-control" placeholder="Last Name" id="lastName"
-                    formControlName="lastName">
-            </div>
-            <div class="val-message">
-                <span class="text-danger"
-                    *ngIf="employeeForm.get('lastName')?.invalid && (employeeForm.get('lastName')?.dirty || employeeForm.get('lastName')?.touched)">
-                    Please provide a last name.
-                </span>
+        <!-- first name -->
+        <div class="row">
+            <div class="col-12">
+                <div class="firstName">
+                    <div class="input-group flex-nowrap">
+                        <input type="text" class="form-control" placeholder="First Name" id="firstName"
+                            formControlName="firstName">
+                    </div>
+                    <span class="text-danger val-message "
+                        *ngIf="employeeForm.get('firstName')?.invalid && (employeeForm.get('firstName')?.dirty || employeeForm.get('firstName')?.touched)">
+                        Please provide a first name.
+                    </span>
+                </div>
             </div>
         </div>
-
-        <div class="email">
-            <div class="input-group flex-nowrap">
-                <input type="text" class="form-control" placeholder="email" id="email" formControlName="email">
-            </div>
-            <div class="val-message">
-                <span class="text-danger"
-                    *ngIf="employeeForm.get('email')?.invalid && (employeeForm.get('email')?.dirty || employeeForm.get('email')?.touched)">
-                    Please provide an email.
-                </span>
-            </div>
-        </div>
-
-        <div class="salary">
-            <div class="input-group flex-nowrap">
-                <input type="text" class="form-control" placeholder="salary" id="salary" formControlName="salary">
-            </div>
-            <div class="val-message">
-                <span class="text-danger"
-                    *ngIf="employeeForm.get('salary')?.invalid && (employeeForm.get('salary')?.dirty || employeeForm.get('salary')?.touched)">
-                    Please provide a salary.
-                </span>
+        <!-- last name -->
+        <div class="row">
+            <div class="col-12">
+                <div class="lastName">
+                    <div class="input-group flex-nowrap">
+                        <input type="text" class="form-control" placeholder="Last Name" id="lastName"
+                            formControlName="lastName">
+                    </div>
+                    <span class="text-danger val-messag"
+                        *ngIf="employeeForm.get('lastName')?.invalid && (employeeForm.get('lastName')?.dirty || employeeForm.get('lastName')?.touched)">
+                        Please provide a last name.
+                    </span>
+                </div>
             </div>
         </div>
-
-
+        <!-- email  -->
+        <div class="row">
+            <div class="col-12">
+                <div class="email">
+                    <div class="input-group flex-nowrap">
+                        <input type="text" class="form-control" placeholder="email" id="email" formControlName="email">
+                    </div>
+                    <div class="val-message">
+                        <span class="text-danger"
+                            *ngIf="employeeForm.get('email')?.invalid && (employeeForm.get('email')?.dirty || employeeForm.get('email')?.touched)">
+                            Please provide an email.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- salary -->
+        <div class="row">
+            <div class="col-12">
+                <div class="salary">
+                    <div class="input-group flex-nowrap">
+                        <input type="text" class="form-control" placeholder="salary" id="salary"
+                            formControlName="salary">
+                    </div>
+                    <div class="val-message">
+                        <span class="text-danger"
+                            *ngIf="employeeForm.get('salary')?.invalid && (employeeForm.get('salary')?.dirty || employeeForm.get('salary')?.touched)">
+                            Please provide a salary.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <button (click)="postEmployeeDetails()" [disabled]="!employeeForm.valid" type="submit"
-        class="form-btn btn btn-primary">Add Employee</button>
+    <!--  button -->
+    <div class="row">
+        <div class="col-12">
+            <button (click)="postEmployeeDetails()" [disabled]="!employeeForm.valid" type="submit"
+                class="form-btn btn ">Add Employee</button>
+        </div>
+    </div>
 </form>

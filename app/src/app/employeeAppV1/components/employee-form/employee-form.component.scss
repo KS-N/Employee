@@ -1,12 +1,36 @@
-.form-btn {
-  margin-top: 0.5rem;
-  width: 100%;
+* {
+  .btn {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border: solid #333 0.7px;
+    background-color: #252525;
+    color: white;
+    &:hover {
+      background-color: transparent;
+      color: #252525;
+    }
+  }
 }
 
-.input-group {
-  margin-top: 0.5rem;
+.form-btn {
+  justify-content: center;
+  margin: auto;
+  display: flex;
+  width: 10rem;
 }
 
 .val-message {
   display: block;
+}
+
+.col-12 {
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 50rem;
+  margin: auto;
+  margin-top: 0.5rem;
+}
+
+input {
+  background-color: #f3f2e9;
 }

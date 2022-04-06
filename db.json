@@ -11,6 +11,13 @@
       "lastName": "smith",
       "email": "kirsty",
       "salary": "smith"
+    },
+    {
+      "id": 3,
+      "firstName": "kirsty",
+      "lastName": "neale",
+      "email": "kirstysn@icloud.com",
+      "salary": "111111111"
     }
   ]
 }
