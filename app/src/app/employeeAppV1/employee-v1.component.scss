@@ -1,12 +1,47 @@
-.layout {
+.body {
+  background-color: #f3f2e9;
+}
+
+.card-body {
+  background: linear-gradient(to top, white 32.5%, #f3f2e9 32.5%);
+}
+
+.nav {
   display: flex;
   justify-content: center;
+  background-color: #333;
+  height: 4rem;
 }
 
-.search {
-  margin-top: 5rem;
+.btn {
+  margin-bottom: 1rem;
+  border: solid #333333 0.7px;
+  background-color: #333333;
+  color: white;
+  height: 3rem;
+  &:hover {
+    background-color: transparent;
+    color: #333333;
+  }
 }
 
-.form {
+.employeeTable {
+  width: 70rem;
+  display: flex;
+  margin: auto;
   margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.enterBtn {
+  justify-content: center;
+  display: flex;
+  margin-top: 2rem;
+}
+
+.search-bar {
+  margin-top: 1rem;
+  // width: 60rem;
+  justify-content: center;
+  display: flex;
 }

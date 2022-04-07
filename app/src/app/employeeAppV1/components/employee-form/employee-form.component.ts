@@ -38,8 +38,7 @@ export class EmployeeFormComponent implements OnInit {
     this.employeeModelObj.lastName = this.employeeForm.value.lastName;
     this.employeeModelObj.email = this.employeeForm.value.email;
     this.employeeModelObj.salary = this.employeeForm.value.salary;
-    this.service.postEmployee(this.employeeModelObj).subscribe((result) => {
-      console.log(result);
+    this.service.postEmployee(this.employeeModelObj).subscribe(() => {
       alert('employee added successfully');
     });
   }

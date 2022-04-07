@@ -8,34 +8,34 @@ import { map } from 'rxjs/operators';
 export class EmployeeV1Service {
   constructor(private http: HttpClient) {}
 
-  postEmployee(data: any) {
-    return this.http.post<any>('http://localhost:3000/posts', data).pipe(
-      map((result: any) => {
-        return result;
+  postEmployee(inputData: any) {
+    return this.http.post<any>('http://localhost:3000/posts', inputData).pipe(
+      map((formData: any) => {
+        return formData;
       })
     );
   }
 
   getEmployee() {
     return this.http.get<any>('http://localhost:3000/posts').pipe(
-      map((result: any) => {
-        return result;
+      map((formData: any) => {
+        return formData;
       })
     );
   }
 
   updateEmployee(data: any, id: number) {
     return this.http.get<any>('http://localhost:3000/posts' + id, data).pipe(
-      map((result: any) => {
-        return result;
+      map((formData: any) => {
+        return formData;
       })
     );
   }
 
   deleteEmployee(id: number) {
     return this.http.get<any>('http://localhost:3000/posts' + id).pipe(
-      map((result: any) => {
-        return result;
+      map((formData: any) => {
+        return formData;
       })
     );
   }
