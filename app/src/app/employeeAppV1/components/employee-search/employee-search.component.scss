@@ -3,6 +3,21 @@
 }
 
 .input {
-  width: 50rem;
   height: 3rem;
+}
+
+.add-btn {
+  background-color: rgb(1, 65, 1);
+  color: white;
+  height: 3rem;
+  font-size: 0.9rem;
+  line-height: 1.2em;
+}
+.btn {
+  margin-left: 0.5rem;
+}
+
+.add-form {
+  width: 100%;
+  margin-top: 2rem;
 }

@@ -3,13 +3,15 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-employee-search',
   templateUrl: './employee-search.component.html',
-  styleUrls: ['./employee-search.component.scss']
+  styleUrls: ['./employee-search.component.scss'],
 })
 export class EmployeeSearchComponent implements OnInit {
+  toggleForm = false;
+  constructor() {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
+  toggleFormOnClick() {
+    this.toggleForm = !this.toggleForm;
   }
-
 }

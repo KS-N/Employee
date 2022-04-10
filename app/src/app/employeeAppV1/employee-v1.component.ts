@@ -6,12 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./employee-v1.component.scss'],
 })
 export class EmployeeV1Component implements OnInit {
-  toggleForm = false;
   constructor() {}
 
   ngOnInit(): void {}
-
-  toggleFormOnClick() {
-    this.toggleForm = !this.toggleForm;
-  }
 }

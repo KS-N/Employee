@@ -1,4 +1,11 @@
 <form class="d-flex input">
-    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success" type="submit">Filter by</button>
+    <input class="form-control me-2" type="search" placeholder="Search">
+    <button class="btn btn-outline-success" type="submit">Search</button>
+    <button type="button" (click)="toggleFormOnClick()" class="btn add-btn" href="#">Add
+        Employee</button>
 </form>
+
+<!-- form -->
+<div class="add-form">
+    <app-employee-form *ngIf="toggleForm"></app-employee-form>
+</div>

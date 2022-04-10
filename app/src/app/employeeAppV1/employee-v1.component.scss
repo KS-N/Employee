@@ -1,47 +1,62 @@
 .body {
-  background-color: #f3f2e9;
+  padding-right: 1rem;
 }
 
-.card-body {
-  background: linear-gradient(to top, white 32.5%, #f3f2e9 32.5%);
+.col-3 {
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
-.nav {
+.col-9 {
+  background-color: rgba(234, 230, 230, 0.539);
+  height: 100vh;
+}
+
+.login-section {
   display: flex;
   justify-content: center;
-  background-color: #333;
-  height: 4rem;
-}
+  margin-top: 2rem;
 
-.btn {
-  margin-bottom: 1rem;
-  border: solid #333333 0.7px;
-  background-color: #333333;
-  color: white;
-  height: 3rem;
-  &:hover {
-    background-color: transparent;
-    color: #333333;
+  .icon {
+    svg {
+      width: 3rem;
+      height: 3rem;
+      opacity: 40%;
+      margin-left: 15%;
+    }
+    p {
+      margin-top: 1rem;
+      justify-content: center;
+    }
   }
 }
 
-.employeeTable {
-  width: 70rem;
-  display: flex;
-  margin: auto;
+.nav-section {
   margin-top: 2rem;
-  margin-bottom: 2rem;
+
+  .nav-button {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+
+    .btn {
+      width: 100%;
+      background-color: transparent;
+      color: #333;
+      height: 3rem;
+
+      &:hover {
+        background-color: #333;
+        color: white;
+      }
+    }
+  }
 }
 
-.enterBtn {
-  justify-content: center;
-  display: flex;
-  margin-top: 2rem;
-}
-
-.search-bar {
+.display-section {
   margin-top: 1rem;
-  // width: 60rem;
-  justify-content: center;
-  display: flex;
+}
+
+hr {
+  width: 10rem;
+  margin-left: 3rem;
 }

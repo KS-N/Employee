@@ -1,68 +1,41 @@
-<div class="body">
-
-    <!-- nav -->
-    <div class="nav ">
-    </div>
-
-    <!-- search field -->
-    <div class="row">
-        <div class="col-12 ">
-            <div class="search-bar">
-                <app-employee-search></app-employee-search>
+<div class="container">
+    <div class="body">
+        <div class="row">
+            <div class="col-3">
+                <div class="login-section">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-person-circle" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                            <path fill-rule="evenodd"
+                                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                        </svg>
+                        <p>logged in</p>
+                    </div>
+                </div>
+                <div class="divider">
+                    <hr>
+                </div>
+                <div class="nav-section">
+                    <div class="row">
+                        <div class="nav-button">
+                            <button type="button" routerLink="/home-dashboard" class="btn " href="#">Dashboard</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="nav-button">
+                            <button type="button" routerLink="/employee-dashboard" class="btn "
+                                href="#">Employees</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- display -->
+            <div class="col-9">
+                <div class="display-section">
+                    <router-outlet></router-outlet>
+                </div>
             </div>
         </div>
-    </div>
-
-    <!-- add button -->
-    <div class="row">
-        <div class="col-12">
-            <div class="enterBtn">
-                <button (click)="toggleFormOnClick()" type="button" class="btn btn-toggle " data-bs-toggle="modal"
-                    data-bs-target="#exampleModal">
-                    {{ !toggleForm ? 'Show Employee Form' : 'Hide Employee Form' }}
-                </button>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- form -->
-    <app-employee-form *ngIf="toggleForm"></app-employee-form>
-
-    <!-- table
-    <div class="row">
-        <div class="col-12 ">
-            <div class="employeeTable">
-                <table class="table mt-3">
-                    <thead>
-                        <tr>
-                            <th scope="col">Employee ID</th>
-                            <th scope="col">First Name</th>
-                            <th scope="col">Last Name</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Salary</th>
-                            <th scope="col">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>John</td>
-                            <td>Doe</td>
-                            <td>JohnDoe@email.com</td>
-                            <td>£450,000</td>
-                            <td><button class="btn btn-info">Edit</button>
-                                <button class="btn btn-danger">Delete</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div> -->
-
-    <!-- employee card -->
-    <div class="card-body">
-        <app-employee-card></app-employee-card>
     </div>
 </div>
